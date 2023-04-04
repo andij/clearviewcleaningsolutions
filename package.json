@@ -4,6 +4,8 @@
   "description": "",
   "main": ".eleventy.js",
   "scripts": {
+    "build": "npx @11ty/eleventy",
+    "start": "npx @11ty/eleventy --serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,7 +20,6 @@
   },
   "homepage": "https://github.com/andij/clearviewcleaningsolutions#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^0.10.0",
-    "less-watch-compiler": "^1.14.6"
+    "less-watch-compiler": "^1.16.3"
   }
 }
