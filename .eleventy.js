@@ -1,11 +1,9 @@
 module.exports = function(eleventyConfig) {
 
-  eleventyConfig.setBrowserSyncConfig({
-    // https://www.browsersync.io/docs/options
-    codeSync: false
-  });
+  eleventyConfig.addWatchTarget("./src/styles.css");
 
-  eleventyConfig.addPassthroughCopy("src/assets");
+  eleventyConfig.addPassthroughCopy("./src/assets");
+  eleventyConfig.addPassthroughCopy("./src/styles.css");
 
   return {
     dir: {
@@ -15,5 +13,4 @@ module.exports = function(eleventyConfig) {
       layouts: "_layouts"
     }
   };
-
 };

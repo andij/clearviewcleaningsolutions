@@ -1,6 +1,6 @@
 ---
+layout: base
 title: Clearview Cleaning Solutions
-layout: layout.njk
 ---
 
 Your reliable cleaning and support services partner.
