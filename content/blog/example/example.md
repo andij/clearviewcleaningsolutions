@@ -8,4 +8,4 @@ tags:
 
 Example
 
-{% image "./example.png", "example alt" %}
+{% image "./testcard-640x360.gif", "testcard" %}
