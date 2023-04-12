@@ -53,6 +53,7 @@ html {
   overflow-y: scroll;
 }
 body {
+  padding-inline: 5%;
   max-width: 40em;
 }
 
