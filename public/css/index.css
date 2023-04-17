@@ -173,6 +173,10 @@ header {
   margin-right: 2em;
   display: inline-block;
   width: 282px;
+  aspect-ratio: 179 / 46;
+}
+.home-link img {
+  display: block;
 }
 .home-link:link:not(:hover) {
   text-decoration: none;
