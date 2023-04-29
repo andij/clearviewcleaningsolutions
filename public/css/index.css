@@ -65,18 +65,6 @@ body {
   width: 1px;
 }
 
-p:last-child {
-  margin-bottom: 0;
-}
-p {
-  line-height: 1.5;
-  max-width: 55ch;
-}
-
-li {
-  line-height: 1.5;
-}
-
 a[href] {
   color: var(--text-color-link);
 }
@@ -94,6 +82,28 @@ main {
 }
 main :first-child {
   margin-top: 0;
+}
+
+main p:last-child {
+  margin-bottom: 0;
+}
+main p {
+  line-height: 1.5;
+  max-width: 55ch;
+}
+
+main li {
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+  line-height: 1.5;
+}
+
+main li:first-child {
+  margin-bottom: 0;
+}
+
+main li:last-child {
+  margin-bottom: 0;
 }
 
 header {
