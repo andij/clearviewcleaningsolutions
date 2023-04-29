@@ -139,6 +139,10 @@ table th {
   padding-right: 1em;
 }
 
+address {
+  font-style: normal;
+}
+
 pre,
 code {
   font-family: var(--font-family-monospace);
