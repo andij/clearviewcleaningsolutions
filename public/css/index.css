@@ -74,8 +74,13 @@ a[href]:visited {
 a[href]:hover,
 a[href]:active {
   color: var(--text-color-link-active);
+  text-decoration: none;
 }
 
+:focus {
+  outline: 0.125em solid var(--text-color);
+  outline-offset: 0.125em;
+}
 
 .with-sidebar {
   margin-inline: 5%;
