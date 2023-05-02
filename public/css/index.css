@@ -226,8 +226,13 @@ header {
   margin: 0;
   list-style: none;
 }
+
 .nav-item {
   margin-block: 0.5em;
+}
+
+.nav-item a {
+  padding-block: 0.5em;
 }
 
 /* Posts list */
