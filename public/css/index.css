@@ -76,12 +76,26 @@ a[href]:active {
   color: var(--text-color-link-active);
 }
 
-main {
+
+.with-sidebar {
   margin-inline: 5%;
-  padding-block: 1rem;
+  margin-block: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5%;
 }
-main :first-child {
+
+.with-sidebar > :last-child {
   margin-top: 0;
+  flex-basis: 25ch; 
+  flex-grow: 1;
+}
+
+.with-sidebar > :first-child {
+  margin-top: 0;
+  flex-basis: 0;
+  flex-grow: 999;
+  min-inline-size: 55%;
 }
 
 main p:last-child {
@@ -198,20 +212,12 @@ header {
 
 /* Nav */
 .nav {
-  display: flex;
   padding: 0;
   margin: 0;
   list-style: none;
 }
 .nav-item {
-  display: inline-block;
-  margin-right: 1em;
-}
-.nav-item a[href]:not(:hover) {
-  text-decoration: none;
-}
-.nav a[href][aria-current="page"] {
-  text-decoration: underline;
+  margin-block: 0.5em;
 }
 
 /* Posts list */
