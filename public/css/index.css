@@ -185,6 +185,11 @@ code {
   word-break: break-all;
 }
 
+picture {
+  display: block;
+  margin-block: 1em;
+}
+
 picture img {
   max-width: 100%;
 }
