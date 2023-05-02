@@ -227,11 +227,8 @@ header {
   list-style: none;
 }
 
-.nav-item {
-  margin-block: 0.5em;
-}
-
 .nav-item a {
+  display: inline-block;
   padding-block: 0.5em;
 }
 
