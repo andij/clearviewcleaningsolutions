@@ -51,7 +51,7 @@ html {
   overflow-y: scroll;
 }
 body {
-  font-size: clamp(1em, 1vw + 0.75rem, 5rem);
+  font-size: clamp(1em, 1vw + 0.5rem, 1.5rem);
 }
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
@@ -74,14 +74,33 @@ a[href]:visited {
 a[href]:hover,
 a[href]:active {
   color: var(--text-color-link-active);
+  text-decoration: none;
 }
 
-main {
-  margin-inline: 5%;
-  padding-block: 1rem;
+:focus {
+  outline: 0.125em solid var(--text-color);
+  outline-offset: 0.125em;
 }
-main :first-child {
+
+.with-sidebar {
+  margin-inline: 5%;
+  margin-block: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5%;
+}
+
+.with-sidebar > :last-child {
   margin-top: 0;
+  flex-basis: 25ch; 
+  flex-grow: 1;
+}
+
+.with-sidebar > :first-child {
+  margin-top: 0;
+  flex-basis: 0;
+  flex-grow: 999;
+  min-inline-size: 55%;
 }
 
 main p:last-child {
@@ -166,6 +185,11 @@ code {
   word-break: break-all;
 }
 
+picture {
+  display: block;
+  margin-block: 1em;
+}
+
 picture img {
   max-width: 100%;
 }
@@ -198,20 +222,14 @@ header {
 
 /* Nav */
 .nav {
-  display: flex;
   padding: 0;
   margin: 0;
   list-style: none;
 }
-.nav-item {
+
+.nav-item a {
   display: inline-block;
-  margin-right: 1em;
-}
-.nav-item a[href]:not(:hover) {
-  text-decoration: none;
-}
-.nav a[href][aria-current="page"] {
-  text-decoration: underline;
+  padding-block: 0.5em;
 }
 
 /* Posts list */

@@ -48,27 +48,30 @@
       <a href="/" class="home-link">
         <img src="/img/logo.svg" alt="{{ metadata.title }}">
       </a>
-
-      {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-      <nav>
-        <h2 class="visually-hidden">Top level navigation menu</h2>
-        <ul class="nav">
-        {%- for entry in collections.all | eleventyNavigation %}
-          <li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
-        {%- endfor %}
-        </ul>
-      </nav>
     </header>
 
-    <main id="skip">
-      {{ content | safe }}
-    </main>
+    <div class="with-sidebar">
+      <main id="skip">
+        {{ content | safe }}
+      </main>
+      <aside>
+        {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
+        <nav>
+          <h2>Cleaning services</h2>
+          <ul class="nav">
+            {%- for entry in collections.all | eleventyNavigation %}
+            <li class="nav-item"><a href="{{ entry.url }}" {% if entry.url==page.url %} aria-current="page" {% endif %}>{{ entry.title }}</a></li>
+            {%- endfor %}
+          </ul>
+        </nav>
+      </aside>
+    </div>
 
     <footer>
       <h2>Contact</h2>
       <address>
-        <p>Telephone: <a href="tel:01252629814">01252 629814</a></p>
-        <p>Email: <a href="mailto:info@clearviewcleaningsolutions.co.uk?subject=Enquiry">info@clearviewcleaningsolutions.co.uk</a></p>
+        <p><a href="tel:01252629814">01252 629814</a></p>
+        <p><a href="mailto:info@clearviewcleaningsolutions.co.uk?subject=Enquiry">info@clearviewcleaningsolutions.co.uk</a></p>
       </address>
     </footer>
 
