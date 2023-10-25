@@ -64,6 +64,27 @@
             {%- endfor %}
           </ul>
         </nav>
+        <form name="contact" method="POST" netlify>
+          <p>
+            <label for="name">Name</label>
+            <input id="name" type="text" name="name">
+          </p>
+          <p>
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email">
+          </p>
+          <p>
+            <label for="tel">Telephone</label>
+            <input id="tel" type="tel" name="tel">
+          </p>
+          <p>
+            <label for="message">Message</label>
+            <textarea id="message" name="message"></textarea>
+          </p>
+          <p>
+            <button type="submit">Send</button>
+          </p>
+        </form>
       </aside>
     </div>
 
