@@ -40,6 +40,9 @@
 
     {#- Render the CSS bundle using Inlined CSS (for the fastest site performance in production) #}
     <style>{% getBundle "css" %}</style>
+
+    {#- Add the contents of a file to the bundle #}
+    {% js %}{% include "public/script.js" %}{% endjs %}
   </head>
   <body>
     <a href="#skip" class="visually-hidden">Skip to main content</a>
@@ -64,22 +67,23 @@
             {%- endfor %}
           </ul>
         </nav>
-        <form name="contact" method="POST" netlify>
+        <form name="contact" action="/success" method="POST" netlify>
+          <h2>Send a message</h2>
           <p>
             <label for="name">Name</label>
-            <input id="name" type="text" name="name">
+            <input id="name" type="text" name="name" required>
           </p>
           <p>
             <label for="email">Email</label>
-            <input id="email" type="email" name="email">
+            <input id="email" type="email" name="email" required>
           </p>
           <p>
             <label for="tel">Telephone</label>
-            <input id="tel" type="tel" name="tel">
+            <input id="tel" type="tel" name="tel" required>
           </p>
           <p>
             <label for="message">Message</label>
-            <textarea id="message" name="message"></textarea>
+            <textarea id="message" name="message" required></textarea>
           </p>
           <p>
             <button type="submit">Send</button>
@@ -92,9 +96,12 @@
       <h2>Contact</h2>
       <address>
         <p><a href="tel:01252629814">01252 629814</a></p>
-        <p><a href="mailto:info@clearviewcleaningsolutions.co.uk?subject=Enquiry">info@clearviewcleaningsolutions.co.uk</a></p>
+        <p>info@clearviewcleaningsolutions.co.uk</p>
       </address>
     </footer>
+
+    {#- Render the JS bundle #}
+    <script>{% getBundle "js" %}</script>
 
     <!-- Current page: {{ page.url | htmlBaseUrl }} -->
   </body>
