@@ -112,6 +112,7 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"],
+textarea,
 input:not([type="radio"]),
 input:not([type="checkbox"]) {
   -webkit-appearance: button; /* [1] */
