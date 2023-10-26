@@ -82,6 +82,59 @@ a[href]:active {
   outline-offset: 0.125em;
 }
 
+/* Form reset */
+
+/**
+* [1] Applying a transparent background
+* [2] Change the font size to inherit from <body>
+* [3] Setting the font to inherit from <body>
+* [4] Remove the default margin, padding and border
+*/
+button,
+input,
+optgroup,
+select,
+textarea {
+  background-color: transparent; /* [1] */
+  font-size: inherit; /* [2] */
+  line-height: inherit; /* [2] */
+  font-family: inherit; /* [3] */
+  margin: 0; /* [4] */
+  padding: 0; /* [4] */
+  border: 0; /* [4] */
+}
+
+/**
+* [1] Reset the user agent styles in iOS and Safari
+* [2] Remove the border radius applied to iOS
+*/
+button,
+[type="button"],
+[type="reset"],
+[type="submit"],
+textarea,
+input:not([type="radio"]),
+input:not([type="checkbox"]) {
+  -webkit-appearance: button; /* [1] */
+  -webkit-border-radius: 0; /* [2] */
+}
+
+/**
+* [1] Remove the user agent styles from <fieldset>
+*/
+fieldset {
+  padding: 0; /* [1] */
+  margin: 0; /* [1] */
+  border: 0; /* [1] */
+}
+
+/**
+* [1] Reset the default padding for <legend>
+*/
+legend {
+  padding: 0; /* [1] */
+}
+
 .with-sidebar {
   margin-inline: 5%;
   margin-block: 1em;
@@ -230,6 +283,37 @@ header {
 .nav-item a {
   display: inline-block;
   padding-block: 0.5em;
+}
+
+/* Contact form */
+
+[name="contact"] label {
+  display: block;
+  margin-block-end: 0.5rem;
+}
+
+[name="contact"] input,
+[name="contact"] textarea,
+[name="contact"] button {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding-inline-start: 0.5rem;
+  padding-inline-end: 0.5rem;
+  padding-block-start: 0.5rem;
+  padding-block-end: 0.5rem;
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--color-gray-50);
+}
+
+[name="contact"] input,
+[name="contact"] textarea {
+  width: 100%;
+}
+
+[name="contact"] button {
+  color: var(--text-color-link);
+  border-color: var(--text-color-link);
 }
 
 /* Posts list */
